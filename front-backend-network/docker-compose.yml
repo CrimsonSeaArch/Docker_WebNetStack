@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: ./backend
+    container_name: webnetstack-backend
+    expose:
+      - "8000"   # nur im Compose-Netz sichtbar
+
+  frontend:
+    build: ./frontend
+    container_name: webnetstack-frontend
+    ports:
+      - "8081:80"  # Host:8081 → Frontend:80
+    depends_on:
+      - backend
