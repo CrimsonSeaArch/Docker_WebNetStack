@@ -1,0 +1,22 @@
+services:
+  db:
+    image: mysql:8
+    container_name: db
+    networks:
+      - appnet
+    environment:
+      DB_PASSWORD=${DB_PASSWORD} 
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - appnet
+    depends_on:
+      - db
+networks:
+  appnet:
+    driver: bridge
+
