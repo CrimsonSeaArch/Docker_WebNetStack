@@ -63,7 +63,7 @@ _We want to combine two container front and backend into one network_
 - backend => _JSON-Response_ => _NGINX_ => browser
 
 `````
-bash
+_bash_
 
 docker compose up -d --build
 
@@ -73,7 +73,8 @@ curl http://localhost:8081/api/hello
 
 ## expected answer
 
-````JSON
+````
+_JSON_
 
 {
   "service": "backend",
