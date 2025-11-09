@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-config
+  namespace: hello
+data:
+  MESSAGE: "Hello Stephan 👋 — served by K3s!"
